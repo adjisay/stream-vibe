@@ -5,11 +5,11 @@ import { Head } from "minista"
 import "./styles"
 
 export default function (props) {
-  const { children, title, url } = props
+  const { children, title, url, isHeaderFixed } = props
   return (
     <>
       <Head htmlAttributes={{ lang: "en" }}>
-        <title>Strime Vibe | {title}</title>
+        <title>Stream Vibe | {title}</title>
         <script src="/src/main.js" type="module" />
         <link
           rel="apple-touch-icon"
@@ -30,7 +30,7 @@ export default function (props) {
         />
         <link rel="manifest" href="/site.webmanifest"></link>
       </Head>
-      <Header url={url} />
+      <Header url={url} isFixed={isHeaderFixed} />
       <Content>{children}</Content>
       <Footer />
     </>
