@@ -1,0 +1,23 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(var(--gridColumns), 1fr);
+  gap: fluid-to-laptop(30, 20);
+
+  --gridColumns: 1;
+
+  &--2 {
+    --gridColumns: 2;
+  }
+
+  &--3 {
+    --gridColumns: 3;
+
+    @include tablet {
+      --gridColumns: 2;
+    }
+
+    @include mobile {
+      --gridColumns: 1;
+    }
+  }
+}
