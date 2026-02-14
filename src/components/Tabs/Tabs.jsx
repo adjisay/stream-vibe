@@ -8,15 +8,15 @@ const Tabs = (props) => {
     className,
     title,
     items = [],
-    navigatioTargetElementId = null,
+    navigationTargetElementId = null,
   } = props
 
   return (
     <div
       className={classNames(className, "tabs")}
-      data-js-tabs={JSON.stringify({ navigatioTargetElementId })}
+      data-js-tabs={JSON.stringify({ navigationTargetElementId })}
     >
-      {!navigatioTargetElementId && (
+      {!navigationTargetElementId && (
         <TabsNavigation title={title} items={items} />
       )}
       <div className="tabs__body">

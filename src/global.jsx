@@ -3,6 +3,7 @@ import Footer from "@/layouts/Footer"
 import Header from "@/layouts/Header"
 import { Head } from "minista"
 import "./styles"
+import Banner from "@/sections/Banner"
 
 export default function (props) {
   const { children, title, url, isHeaderFixed } = props
@@ -31,7 +32,10 @@ export default function (props) {
         <link rel="manifest" href="/site.webmanifest"></link>
       </Head>
       <Header url={url} isFixed={isHeaderFixed} />
-      <Content>{children}</Content>
+      <Content isResetPaddingTop={isHeaderFixed}>
+        {children}
+        <Banner />
+      </Content>
       <Footer />
     </>
   )
