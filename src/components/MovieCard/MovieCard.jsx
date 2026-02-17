@@ -12,7 +12,7 @@ const MovieCard = (props) => {
     released,
     rating,
     season,
-    href = "/move",
+    href = "/movie",
   } = props
   return (
     <a className="movie-card" href={href} title={title}>
@@ -40,7 +40,7 @@ const MovieCard = (props) => {
           </Badge>
         )}
         {released && (
-          <Badge className="movie-card__released-badge">
+          <Badge className="movie-card__released-badge" isBig>
             Released at
             <time
               className="movie-card__released-badge-label"

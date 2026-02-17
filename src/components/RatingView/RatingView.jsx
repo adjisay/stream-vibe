@@ -1,5 +1,8 @@
 import "./RatingView.scss"
 
+import starsUnfilledImgSrc from "@/assets/images/rating/stars_unfilled.svg"
+import starsFilledImgSrc from "@/assets/images/rating/stars_filled.svg"
+
 const RatingView = (props) => {
   const { value, label } = props
   const airaLabel = `Rating: ${value} stars`
@@ -15,14 +18,14 @@ const RatingView = (props) => {
         <img
           width={98}
           height={18}
-          src="/rating/stars_unfilled.svg"
+          src={starsUnfilledImgSrc}
           alt=""
           className="rating-view__stars-unfilled"
         />
         <img
           width={98}
           height={18}
-          src="/rating/stars_filled.svg"
+          src={starsFilledImgSrc}
           alt=""
           className="rating-view__stars-filled"
         />

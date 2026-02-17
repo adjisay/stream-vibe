@@ -21,6 +21,7 @@ const Field = (props) => {
   const Component = type === "textarea" ? "textarea" : "input"
 
   const extraAttrs = {}
+  const fieldControlClassName = "field__control"
 
   if (mask) {
     extraAttrs["data-js-input-mask"] = mask
@@ -37,9 +38,9 @@ const Field = (props) => {
         )}
       </label>
       <div className="field__body">
-        {renderBefore?.("field__control")}
+        {renderBefore?.(fieldControlClassName)}
         <Component
-          className="field__control"
+          className={fieldControlClassName}
           id={id}
           type={type}
           placeholder={placeholder}

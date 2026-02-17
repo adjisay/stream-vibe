@@ -24,7 +24,7 @@
       row-gap: 50px;
     }
 
-    @include mobile {
+    @include mobile-s {
       background:
         linear-gradient(
           90deg,
@@ -40,5 +40,9 @@
   &__body {
     display: grid;
     row-gap: fluid-to-laptop(14, 10);
+  }
+
+  &__button {
+    flex-shrink: 0;
   }
 }
