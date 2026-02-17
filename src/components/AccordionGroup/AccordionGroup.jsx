@@ -2,16 +2,26 @@ import classNames from "classnames"
 import "./AccordionGroup.scss"
 
 const AccordionGroup = (props) => {
-  const { columns = 1, children, isOrderedList = true } = props
+  const {
+    className,
+    /**
+     * '' (default) | ''dark
+     */
+    mode = "",
+    columns = 1,
+    children,
+    isOrderedList = true,
+  } = props
   const ListTag = isOrderedList ? "ol" : "ul"
 
   const itemsPerColumn = Math.ceil(children.length / columns)
 
   return (
     <ListTag
-      className={classNames("accordion-group", {
+      className={classNames(className, "accordion-group", {
         [`accordion-group--${columns}-columns`]: columns > 1,
         "accordion-group--has-counter": isOrderedList,
+        [`accordion-group--${mode}`]: mode,
       })}
     >
       {children.map((child, index) => (
