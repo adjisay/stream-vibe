@@ -142,7 +142,7 @@ const MovieDetails = (props) => {
             <h3 className="movie-details__title">Cast</h3>
             <SliderNavigation
               id={castSliderNavigationId}
-              hasPagintaion={false}
+              hasPagination={false}
               mode="rounded"
               buttonMode="black-08"
             />
