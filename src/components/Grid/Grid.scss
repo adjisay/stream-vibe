@@ -14,7 +14,7 @@
 
     @include tablet {
       --gridColumns: 2;
-      
+
       .grid__item:nth-child(odd):last-child {
         grid-column: -1 / 1;
       }

@@ -20,25 +20,26 @@
   } @else {
     display: flex;
   }
-  justify-content: center;
+
   align-items: center;
+  justify-content: center;
 }
 
 @mixin abs-cover {
-  position: absolute;
   inset: 0;
+  position: absolute;
 }
 
 @mixin abs-center {
+  left: 50%;
   position: absolute;
   top: 50%;
-  left: 50%;
   translate: -50% -50%;
 }
 
 @mixin abs-x {
-  position: absolute;
   left: 50%;
+  position: absolute;
   translate: -50%;
 }
 
@@ -49,21 +50,21 @@
 }
 
 @mixin square($size) {
-  width: $size;
   height: $size;
+  width: $size;
 }
 
 @mixin visually-hidden {
-  position: absolute !important;
-  width: 1px !important;
-  height: 1px !important;
-  padding: 0 !important;
   border: 0 !important;
+  clip: rect(0 0 0 0) !important;
+  clip-path: inset(100%) !important;
+  height: 1px !important;
   margin: -1px !important;
   overflow: hidden !important;
-  clip-path: inset(100%) !important;
-  clip: rect(0 0 0 0) !important;
+  padding: 0 !important;
+  position: absolute !important;
   white-space: nowrap !important;
+  width: 1px !important;
 }
 
 @mixin focus-visible {
@@ -73,6 +74,6 @@
 }
 
 @mixin disabled {
-  opacity: 0.5;
   cursor: not-allowed;
+  opacity: 0.5;
 }

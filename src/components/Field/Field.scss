@@ -1,13 +1,13 @@
 .field {
+  align-items: start;
   display: flex;
   flex-direction: column;
-  align-items: start;
   row-gap: fluid-to-laptop(16, 12);
 
   &__label {
+    color: var(--color-white);
     font-size: fluid-to-laptop(18, 16);
     font-weight: 600;
-    color: var(--color-white);
   }
 
   &__required-star {
@@ -15,19 +15,19 @@
   }
 
   &__body {
-    display: flex;
     column-gap: fluid-to-laptop(16, 12);
+    display: flex;
     width: 100%;
   }
 
   &__control {
-    width: 100%;
-    height: fluid-to-laptop(67, 53);
-    padding-inline: var(--field-padding-x);
-    color: var(--color-white);
     background-color: var(--color-black-08);
     border: var(--border);
     border-radius: var(--border-radius-s);
+    color: var(--color-white);
+    height: fluid-to-laptop(67, 53);
+    padding-inline: var(--field-padding-x);
+    width: 100%;
 
     @include laptop {
       border-radius: var(--border-radius-xs);
@@ -51,8 +51,8 @@
   }
 
   textarea.field__control {
-    resize: vertical;
     min-height: fluid(163, 109);
     padding-block: fluid-to-laptop(20, 16);
+    resize: vertical;
   }
 }
